@@ -190,6 +190,7 @@ namespace Feuerwerk {
         let query: URLSearchParams = new URLSearchParams();
         query.set("command", "find");
         query.set("collection", "Feuerwerke");
+        query.set("data", "{}");
 
         let response: Response = await fetch("https://7c8644f9-f81d-49cd-980b-1883574694b6.fr.bw-cloud-instance.org/lha45131/mingidb.php" + "?" + query.toString());
         let raw: string = await response.text();
