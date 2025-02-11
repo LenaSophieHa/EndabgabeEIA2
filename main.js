@@ -134,14 +134,14 @@ var Feuerwerk;
         query.set("command", "insert");
         query.set("collection", "Feuerwerke");
         query.set("data", JSON.stringify(data));
-        let response = await fetch("https://7c8644f9-f81d-49cd-980b-1883574694b6.fr.bw-cloud-instance.org/lha45131/" + query.toString());
+        let response = await fetch("https://7c8644f9-f81d-49cd-980b-1883574694b6.fr.bw-cloud-instance.org/lha45131/mingidb.php" + query.toString());
         loadFireworkNames();
     }
     async function loadFireworkNames() {
         let query = new URLSearchParams();
         query.set("command", "find");
         query.set("collection", "Feuerwerke");
-        let response = await fetch("https://7c8644f9-f81d-49cd-980b-1883574694b6.fr.bw-cloud-instance.org/lha45131/" + query.toString());
+        let response = await fetch("https://7c8644f9-f81d-49cd-980b-1883574694b6.fr.bw-cloud-instance.org/lha45131/mingidb.php" + query.toString());
         let raw = await response.text();
         let data = JSON.parse(raw).data;
         let availables = document.getElementById("available");
@@ -165,7 +165,7 @@ var Feuerwerk;
         query.set("command", "find");
         query.set("collection", "Feuerwerke");
         query.set("id", this.getAttribute("itemId"));
-        let response = await fetch("https://7c8644f9-f81d-49cd-980b-1883574694b6.fr.bw-cloud-instance.org/lha45131/" + query.toString());
+        let response = await fetch("https://7c8644f9-f81d-49cd-980b-1883574694b6.fr.bw-cloud-instance.org/lha45131/mingidb.php" + query.toString());
         let raw = await response.text();
         let data = JSON.parse(raw).data;
         let loadedConfig = data[this.getAttribute("itemId")];
@@ -193,7 +193,7 @@ var Feuerwerk;
         query.set("command", "delete");
         query.set("collection", "Feuerwerke");
         query.set("id", this.getAttribute("itemId"));
-        let response = await fetch("https://7c8644f9-f81d-49cd-980b-1883574694b6.fr.bw-cloud-instance.org/lha45131/" + query.toString());
+        let response = await fetch("https://7c8644f9-f81d-49cd-980b-1883574694b6.fr.bw-cloud-instance.org/lha45131/mingidb.php" + query.toString());
         let raw = await response.text();
         loadFireworkNames();
     }
