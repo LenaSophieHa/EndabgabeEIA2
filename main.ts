@@ -178,7 +178,7 @@ namespace Feuerwerk {
         query.set("collection", "Feuerwerke");
         query.set("data", JSON.stringify(data));
 
-        let response: Response = await fetch("https://7c8644f9-f81d-49cd-980b-1883574694b6.fr.bw-cloud-instance.org/lha45131/mingidb.php" + query.toString());
+        let response: Response = await fetch("https://7c8644f9-f81d-49cd-980b-1883574694b6.fr.bw-cloud-instance.org/lha45131/mingidb.php" + "?" + query.toString());
         loadFireworkNames();
     }
 
@@ -191,7 +191,7 @@ namespace Feuerwerk {
         query.set("command", "find");
         query.set("collection", "Feuerwerke");
 
-        let response: Response = await fetch("https://7c8644f9-f81d-49cd-980b-1883574694b6.fr.bw-cloud-instance.org/lha45131/mingidb.php" + query.toString());
+        let response: Response = await fetch("https://7c8644f9-f81d-49cd-980b-1883574694b6.fr.bw-cloud-instance.org/lha45131/mingidb.php" + "?" + query.toString());
         let raw: string = await response.text();
         let data: Items = JSON.parse(raw).data;
         let availables: HTMLElement = document.getElementById("available");
@@ -234,7 +234,7 @@ namespace Feuerwerk {
         query.set("collection", "Feuerwerke");
         query.set("id", this.getAttribute("itemId"));
 
-        let response: Response = await fetch("https://7c8644f9-f81d-49cd-980b-1883574694b6.fr.bw-cloud-instance.org/lha45131/mingidb.php" + query.toString());
+        let response: Response = await fetch("https://7c8644f9-f81d-49cd-980b-1883574694b6.fr.bw-cloud-instance.org/lha45131/mingidb.php" + "?" + query.toString());
         let raw: string = await response.text();
 
         let data: Items = JSON.parse(raw).data;
@@ -271,7 +271,7 @@ namespace Feuerwerk {
         query.set("collection", "Feuerwerke");
         query.set("id", this.getAttribute("itemId"));
 
-        let response: Response = await fetch("https://7c8644f9-f81d-49cd-980b-1883574694b6.fr.bw-cloud-instance.org/lha45131/mingidb.php" + query.toString());
+        let response: Response = await fetch("https://7c8644f9-f81d-49cd-980b-1883574694b6.fr.bw-cloud-instance.org/lha45131/mingidb.php" + "?" + query.toString());
         let raw: string = await response.text();
 
         
