@@ -103,6 +103,7 @@ namespace Feuerwerk {
         setInterval(update, 20);
     }
     
+
     function handleClick(e: MouseEvent): void {
         let fireworkConfig: FireworkConfig = {
             color: color,
@@ -119,6 +120,7 @@ namespace Feuerwerk {
         };
         
         fireworks.push(new Firework(fireworkConfig, particleConfig));
+        
     }
     function drawBackground(): void {
         let gradient: CanvasGradient = crc2.createLinearGradient(0, 0, 0, crc2.canvas.height);
